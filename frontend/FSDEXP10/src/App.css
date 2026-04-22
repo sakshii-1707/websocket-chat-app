@@ -1,0 +1,150 @@
+/* FULL SCREEN CENTER */
+.app {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* CHAT BOX */
+.chat-box {
+  width: 450px;   /* increased */
+  height: 600px;  /* increased */
+
+  background: #0b1220;
+  border-radius: 20px;
+
+  display: flex;
+  flex-direction: column;
+
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+}
+
+/* HEADER */
+.chat-header {
+  padding: 16px;
+  font-size: 20px;   /* bigger */
+  font-weight: bold;
+  background: #020617;
+  color: #22c55e;
+}
+
+/* STATUS */
+.status {
+  float: right;
+  font-size: 14px;
+}
+
+/* USERNAME INPUT */
+.username {
+  padding: 12px;
+  font-size: 16px;   /* bigger */
+  border: none;
+  outline: none;
+  background: #111827;
+  color: white;
+}
+
+/* MESSAGES AREA */
+.messages {
+  flex: 1;
+  padding: 12px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* MESSAGE BUBBLE */
+.message {
+  padding: 12px 16px;
+  border-radius: 16px;
+  max-width: 75%;
+  font-size: 16px;   /* bigger */
+  animation: fadeIn 0.2s ease;
+}
+
+/* SENT */
+.message.sent {
+  background: #22c55e;
+  color: #022c22;
+  align-self: flex-end;
+}
+
+/* RECEIVED */
+.message.received {
+  background: #1f2937;
+  color: #e5e7eb;
+  align-self: flex-start;
+}
+
+/* SENDER NAME */
+.sender {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+/* TIME */
+.time {
+  font-size: 11px;
+  opacity: 0.5;
+  text-align: right;
+}
+
+/* INPUT AREA */
+.input-area {
+  display: flex;
+  gap: 10px;
+  padding: 12px;
+  background: #020617;
+}
+
+/* INPUT FIELD */
+.input-area input {
+  flex: 1;
+  padding: 12px;
+  font-size: 15px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background: #111827;
+  color: white;
+}
+
+/* BUTTON */
+.input-area button {
+  padding: 12px 18px;
+  font-size: 15px;
+  border-radius: 8px;
+  border: none;
+  background: #22c55e;
+  color: #022c22;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.input-area button:hover {
+  background: #16a34a;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
